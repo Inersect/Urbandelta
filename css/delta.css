@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body, html {
+height: 100%;
+width: 100%;
+overflow-x: hidden;
+}
+
+body {
+	font-family: ubuntu;
+	margin: 0px;
+	font-style: normal;
+	font-weight: 200;
+}
+
+#headerdelta {
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+
+/* Split the screen in half */
+	
+.split {
+  height: 70%;
+  width: 50%;
+  position: fixed;
+  z-index: 0;
+}
+
+/* Control the left side */
+.left {
+left: 0;
+float: left;
+background-image: url("../images/deltagalveston.jpg");
+background-size: cover;
+text-align: center;
+}
+
+/* Control the right side */
+.right {
+right: 0;
+float: right;
+background-image: url("../images/Deltaganges.jpg");
+background-size: cover;
+text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 200px;
+  border-radius: 0%;
+}
+
+.button {
+	width: 200px;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 0px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	border: 3px solid #FFFFFF;
+	color: #FFFFFF;
+	transition: all 0.3s linear;
+}
+.button:hover {
+	background-color: #ce846b;
+	color: #C4C4C4;
+	cursor: pointer;
+}

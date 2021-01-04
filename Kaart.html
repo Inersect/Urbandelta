@@ -1,0 +1,72 @@
+<html>
+<head><title>Leaflet.js Essentials</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+	   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+	   crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+	   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+	   crossorigin=""></script>
+
+	<style>
+		#map { position: absolute; top:0; bottom:0; right:0; left:0;z-index:0}
+		p {position: absolute; top: 0; right: 0; z-index:1; background-color: white}
+		
+	</style>
+</head>
+<body>
+ 
+	<div id="map"></div>
+	<!-- data -->
+  <script src="js/Ganges.js"></script>
+  <script src="js/Galveston.js"></script>
+
+	<script> //map initilizer
+  var map = L.map('map', {center: [21.861498734372567, 1.9335937500000002] ,zoom: 3});
+	L.tileLayer('https://api.mapbox.com/styles/v1/inersect/ckjbjwbwla6fh19nji720qj3a/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaW5lcnNlY3QiLCJhIjoiY2s0OXllczNhMDlzbzNzcDhvZjl5ZW96cyJ9.YUL9ySa617GkW9eoTJc1dQ',)
+
+	.addTo(map);
+	
+  var geoJsonLayer = L.geoJson(ganges , {
+    color: '#F5C49C',
+    fillOpacity: 0.7,
+    radius: 500,
+    stroke: 0
+}).addTo(map);
+    var geoJsonLayer = L.geoJson(galveston, {
+    color: '#F5C49C',
+    fillOpacity: 0.7,
+    radius: 500,
+    stroke: 0
+  
+}).addTo(map);
+
+  var icoonovergang = L.icon({
+    iconUrl: './images/Locatie.png',
+
+    iconSize:     [34, 52], // size of the icon
+    shadowSize:   [50, 62], // size of the shadow
+    iconAnchor:   [45, 20], // point of the icon which will correspond to marker's location
+    shadowAnchor: [15, 62],  // the same for the shadow
+    popupAnchor:  [40, -20] // point from which the popup should open relative to the iconAnchor
+});
+
+                  var icoon = L.icon({
+    iconUrl: './images/Locatie.png',
+
+    iconSize:     [34, 52], // size of the icon
+    shadowSize:   [50, 62], // size of the shadow
+    iconAnchor:   [10, 10], // point of the icon which will correspond to marker's location
+    shadowAnchor: [15, 62],  // the same for the shadow
+    popupAnchor:  [40, -20] // point from which the popup should open relative to the iconAnchor
+});
+
+                  var marker = L.marker([29.539820192280388,-94.88802017379598], {icon: icoon}).addTo(map);
+                  marker.bindPopup("<b>Galveston Bay</b>");
+				  
+				  var trans = L.marker([22.22689670982572, 90.068955677013732], {icon: icoonovergang}).addTo(map);
+                  trans.bindPopup("<b>Ganges</b>");
+	</script> 
+
+</body>
+</html>
+

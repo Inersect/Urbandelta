@@ -1,0 +1,20 @@
+#column {
+    border: 0px solid;
+    border-radius: 5px;
+}
+
+  .bg {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/delta.jpg");
+  }
+
+#header {
+    height: 100vh;
+    background-image: url("../images/delta.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

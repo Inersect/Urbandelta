@@ -1,0 +1,18 @@
+#title {
+    text-align: center;
+}
+
+
+#headergalveston {
+    height: 50vh;
+    background-image: url("../images/galveston2.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#column {
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: center;
+}
