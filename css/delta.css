@@ -25,19 +25,17 @@ body {
     background-size: cover;
 }
 
+iframe {
+	border-width: 0px;
+}
+
 a {
 	color: white;
 	text-decoration: none;
 }
 
-
-/* Split the screen in half */
-	
-.split {
-  height: 70%;
-  width: 50%;
-  position: fixed;
-  z-index: 0;
+.col-lg-6 {
+	height: 50%;
 }
 
 /* Control the left side */
@@ -66,14 +64,8 @@ text-align: center;
 
 .button {
 	width: 200px;
-	margin-top: 40px;
-	margin-right: auto;
-	margin-bottom: auto;
-	margin-left: auto;
-	padding-top: 20px;
-	padding-right: 10px;
-	padding-bottom: 20px;
-	padding-left: 10px;
+	margin: 40px auto;
+	padding: 20px 10px;
 	text-align: center;
 	vertical-align: middle;
 	border-radius: 0px;
@@ -88,4 +80,9 @@ text-align: center;
 	background-color: #ce846b;
 	color: #C4C4C4;
 	cursor: pointer;
+}
+
+#leafet {
+	height: 100%;
+	width: 100%;
 }
