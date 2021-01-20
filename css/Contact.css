@@ -33,11 +33,13 @@
 
   }
   
-  img {
-    margin-top: 25%;
-    margin-bottom: 25%;
-    width: 100%;
+  #gif {
+    width: 350px;
+    margin-left: 35%;
+    margin-top: 0%;
+
   }
+
 
   input[type=submit]:hover {
     background-color: #45a049;
@@ -47,6 +49,7 @@
     border-radius: 4px;
     background-color: #c2a198;
     padding: 10px;
+    margin: auto;
   }
   
   label {
